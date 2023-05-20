@@ -12,6 +12,7 @@ import {
 import { useRef, useMemo } from "react";
 import styles from "../sass/home.module.sass";
 import BasicMaterial from "../objects/materials/basicMaterial";
+import NameAnim from "../objects/geometry/nameAnim";
 
 export default function Experience() {
   const cube = useRef();
@@ -24,13 +25,13 @@ export default function Experience() {
       <spotLight intensity={1.0} position={[0, 5, 10]} castShadow />
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
       <ambientLight intensity={0.5} />
-
-      <mesh position-x={0}>
+      <NameAnim position={[-3.0, 1.0, 0.0]} />
+      {/* <mesh position-x={0}>
         <planeGeometry />
         <MeshReflectorMaterial
           color={new Color("#31ff31").convertLinearToSRGB()}
         />
-      </mesh>
+      </mesh> */}
     </>
   );
 }
