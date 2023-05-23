@@ -12,7 +12,7 @@ export default function Experience() {
           fov: 45,
           near: 0.1,
           far: 1000,
-          position: [0, 0, 8],
+          position: [0, 4, 10],
         }}
       >
         <Portfolio />

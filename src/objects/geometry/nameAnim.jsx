@@ -1,6 +1,5 @@
 import { forwardRef, useMemo, useRef } from "react";
 import { useTexture, useGLTF } from "@react-three/drei";
-import { Perf } from "r3f-perf";
 import * as THREE from "three";
 import { textureAnimShader } from "../materials/textureAnimShader";
 import { useFrame } from "@react-three/fiber";
@@ -12,6 +11,8 @@ export const NameAnim = forwardRef((props, ref) => {
   const materialRef = useRef();
 
   const { nodes } = useGLTF("/brent-carlin-front-end-developer.glb");
+
+  console.log("nodes", nodes);
 
   const [texture1, texture2] = useTexture([
     "/halftone-rough-4x.png",
@@ -67,6 +68,12 @@ export const NameAnim = forwardRef((props, ref) => {
 
   const geometry = nodes.Text.geometry;
 
+  // add modelNormal to attributes
+  const modelNormal = geometry.attributes["normal"].array;
+  const modelNormalArray = new Float32Array(modelNormal);
+  const modelNormalAttribute = new BufferAttribute(modelNormalArray, 3);
+  geometry.setAttribute("modelNormal", modelNormalAttribute);
+
   // add uniforms and props to the shaderMaterial
   const uniforms = useMemo(
     () => ({
@@ -74,6 +81,19 @@ export const NameAnim = forwardRef((props, ref) => {
       u_time: { value: 0.0 },
       u_tex1: { value: texture1 },
       u_tex2: { value: texture2 },
+      u_ColorMap: {
+        value: [
+          new THREE.Color("#1fffd4"),
+          new THREE.Color("#31ff31"),
+          new THREE.Color("#18daef"),
+          new THREE.Color("#f7e32b"),
+          new THREE.Color("#ffff00"),
+          new THREE.Color("#17a56f"),
+          new THREE.Color("#bdff06"),
+          new THREE.Color("#99ff99"),
+          new THREE.Color("#59b5ac"),
+        ],
+      },
     }),
     []
   );
@@ -96,7 +116,6 @@ export const NameAnim = forwardRef((props, ref) => {
           uniforms={uniforms}
         />
       </mesh>
-      {/* <Perf position="top-left" /> */}
     </group>
   );
 });
