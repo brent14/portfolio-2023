@@ -1,0 +1,100 @@
+@import global.module.sass
+
+header
+  background: $base-color
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  padding: 25px 20px 75px 20px
+  position: relative
+
+
+  .section__divider
+    width: 100%
+    position: absolute
+    bottom: -67.5px
+    // border-bottom:20px solid
+    // border-image:url(./public/section-border.svg)
+    
+    @media (min-width: $breakpoint-laptop)
+       width: 100%
+
+  .heroSection
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+
+    @media (min-width: $breakpoint-laptop)
+      flex-direction: row
+    
+    svg
+      width: 100%
+      max-width: 300px
+      order: 1
+      margin: 25px 0
+
+      @media (min-width: $breakpoint-mobile-portrait)
+         max-width: 350px
+      
+      @media (min-width: $breakpoint-laptop)
+        order: 0
+        max-width: 400px
+
+    .faceDark
+      fill: $green1
+    
+    .faceLight
+       fill: $green2
+
+    .heroSection__text
+      margin-left: 0px
+      max-width: 910px
+      order: 0
+
+      @media (min-width: $breakpoint-laptop)
+        margin-left: 100px
+        order: 1
+
+      h1
+        @include headline1
+        margin: 0px 0px 20px 0px
+        
+      p
+        @include body1
+        margin: 0px 0px 20px 3px
+
+    .heroSection__button, .heroSection__button_mobile
+      a
+        width: 300px
+        background: $black
+        color: #fff
+        text-decoration: none
+        text-align: center
+        padding: 20px 50px
+        margin: 20px 0
+        border-radius: 10px
+        font-family: $headline-font-google
+        font-size: 20px
+        line-height: 20px
+        display: inline-block
+  
+
+    .heroSection__button
+      display: none
+
+      @media (min-width: $breakpoint-laptop)
+         display: inline-block
+      
+    .heroSection__button_mobile
+      order: 2
+      width: 80%
+      max-width: 600px
+
+      @media (min-width: $breakpoint-laptop)
+        display: none
+     
+      a
+        width: 100%
+        padding: 20px 0px

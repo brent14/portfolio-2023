@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "PORSCHE EXPEDITION CAYENNE",
+    "subtitle": "WEBSITE",
+    "description": "This site was built for the Expedition Cayenne promotion. Porsche Latin America drove a Cayenne from the southern tip of of South America to Mexico and documented the adventure. We updated the site after everystage was finished.",
+    "role": "Developer",
+    "technologies": ["html", "css", "javascript", "react", "redux", "sass"],
+    "video": "/porsche-expedition-website.mp4",
+    "images": [
+      {
+        "url": "/super-sizer-katie-perry.png",
+        "alt": "super sizer katie perry"
+      }
+    ]
+  }
+]

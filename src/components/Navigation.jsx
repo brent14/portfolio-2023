@@ -5,8 +5,14 @@ import { Github, Linkedin, Twitter } from "grommet-icons";
 
 export default function Navigation(props) {
   return (
-    <section {...props}>
+    <nav {...props}>
       <ul>
+        <li>
+          <a href="/#work">WORK</a>
+        </li>
+        {/* <li>
+          <a href="/#resume">RESUME</a>
+        </li> */}
         <li>
           <a href="https://github.com/brent14" target="_blank">
             <Github size="medium" />
@@ -23,11 +29,6 @@ export default function Navigation(props) {
           </a>
         </li>
       </ul>
-      <ul {...props}>
-        <li>{/* <Link to="/">Home</Link> */}</li>
-        <li>{/* <Link to="/portfolio">Portfolio</Link> */}</li>
-        <li>{/* <Link to="/sketches">sketches</Link> */}</li>
-      </ul>
-    </section>
+    </nav>
   );
 }

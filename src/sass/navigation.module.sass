@@ -1,9 +1,9 @@
-@import global.sass
+@import global.module.sass
 
-section 
+nav 
   display: flex
   flex-direction: row-reverse
-  background-color: $base-color
+  background-color: $yellow2
   padding: 0 10px
   
 ul 
@@ -11,19 +11,24 @@ ul
   list-style: none
   display: flex
   flex-direction: row
+  align-items: center
 
   li 
-    margin: 0 5px
+    margin: 0 10px
   
   a 
-    padding: 0 5px
     text-transform: uppercase
     text-decoration: none
-    color: #000
-    font-size: 1.2rem
-    font-family: Arial, Helvetica, sans-serif
+    color: $black
+    font-weight: 800
+    font-size: 21px
+    font-family: $headline-font-google
+    align-items: center
   
     svg 
-      fill: #fff !important
-      stroke: #fff !important
+
+      fill: $black !important
+      stroke: $black !important
+      display: block !important
+      
     
