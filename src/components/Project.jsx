@@ -51,9 +51,15 @@ export default function Project({
   };
 
   // Conditional classes for error and playing state
-  const videoPlayBtnClass = `${styles.playBtn} ${
-    isPlaying ? styles.fadeOut : ""
-  } ${isTouch ? styles.hide : ""}`;
+  const videoPlayBtnClass = `
+    ${styles.playBtn} 
+    ${isPlaying ? styles.fadeOut : ""} 
+    ${isTouch ? styles.hide : ""}
+    ${!isPlaying ? styles.pause : ""}`;
+
+  const videoPauseFilter = `
+    ${styles.reactPlayer}  
+    ${!isPlaying ? styles.pause : ""} `;
 
   return (
     <div className={styles.project}>
@@ -65,8 +71,8 @@ export default function Project({
       <p>
         <span>{role}</span>
       </p>
-      <h5>TECH STACK</h5>
-      <p>
+      <h5>TECH / FEATURE STACK</h5>
+      <p className={styles.feature}>
         {technologies.map((tech, index) => (
           <React.Fragment key={index}>
             <span>{tech}</span>
@@ -109,12 +115,12 @@ export default function Project({
               className={styles.reactPlayer}
               url={video}
               onPause={handleOnPause}
-              onPlay={() => console.log("onPlay")}
-              onReady={() => console.log("onReady")}
-              onStart={() => console.log("onStart")}
+              // onPlay={() => console.log("onPlay")}
+              // onReady={() => console.log("onReady")}
+              // onStart={() => console.log("onStart")}
               onError={handleErrorPlayHover}
-              onSeek={(e) => console.log("onSeek", e)}
-              onBuffer={() => console.log("onBuffer")}
+              // onSeek={(e) => console.log("onSeek", e)}
+              // onBuffer={() => console.log("onBuffer")}
               muted={true}
               // onMouseEnter={handlePlay}
               // onMouseLeave={handleMouseLeave}

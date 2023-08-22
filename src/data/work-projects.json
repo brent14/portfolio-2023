@@ -1,16 +1,61 @@
 [
   {
     "id": 1,
-    "title": "PORSCHE EXPEDITION CAYENNE",
+    "title": "Covergirl: Supersizer",
     "subtitle": "WEBSITE",
-    "description": "This site was built for the Expedition Cayenne promotion. Porsche Latin America drove a Cayenne from the southern tip of of South America to Mexico and documented the adventure. We updated the site after everystage was finished.",
-    "role": "Developer",
-    "technologies": ["html", "css", "javascript", "react", "redux", "sass"],
-    "video": "/porsche-expedition-website.mp4",
+    "description": "Working with art directors, I created an engaging landing page experience for a Covergirl campaign. The main UX challenge was using a different scroll direction without disrupting the user experience. I developed a solution that kept normal user scroll interactions the same, while creating a side scrolling parallax experience. This site was cross browser compatible with IE 8 and early mobile IOS and Android phones.",
+    "role": "Sole Developer",
+    "technologies": [
+      "html",
+      "css",
+      "javascript",
+      "cross browser",
+      "ie8",
+      "animation",
+      "parallax"
+    ],
+    "video": "/work/covergirl-super-sizer-katy-perry-website.mp4",
     "images": [
       {
-        "url": "/super-sizer-katie-perry.png",
-        "alt": "super sizer katie perry"
+        "url": "/work/covergirl-super-sizer-katie-perry-website.png",
+        "alt": "Covergirl - super sizer katie perry"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Porsche: Expedition Cayenne",
+    "subtitle": "WEBSITE",
+    "description": "This website was part of a campaign for the Porsche Cayenne in Latin America to help promote its versatility as not only a luxury car, but a sporty off-roading SUV.  I worked with art directors to help craft animations that showed off the Cayenne’s progress traversing the length of South America and the car features that made it possible.  A major challenge for this website was updating the content of the site in almost real time, as soon as the drivers were able to upload images and videos from remote regions of their journey.",
+    "role": "Sole Developer",
+    "technologies": ["html", "css", "javascript", "sass", "svg animations"],
+    "video": "/work/porsche-expedition-website.mp4",
+    "images": [
+      {
+        "url": "/work/porsche-expedition-website.png",
+        "alt": "Porsche Expedition Cayenne website"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Captains For Clean Water: Our Fight",
+    "subtitle": "WEBSITE",
+    "description": "The goal of the Captains for Clean Water Our Fight page was to tell the story of their cause and the origin of their non-profit. I worked with the client and our art directors to make sure the animations helped support the story. An architectural problem I had to overcome was making sure the animations fit within a site builder template on mobile and desktop. This required making the Our Fight animations its own plugin and making sure the tempo was correct.",
+    "role": "Sole Developer",
+    "technologies": [
+      "html",
+      "css",
+      "javascript",
+      "sass",
+      "svg animations",
+      "wordpress"
+    ],
+    "video": "/work/cfcw-fight-page.mp4",
+    "images": [
+      {
+        "url": "/work/cfcw-website-fight-page.png",
+        "alt": "Captains for Clean Water - Our Fight - website"
       }
     ]
   }

@@ -57,8 +57,9 @@ export default function Hero(props) {
               BRENT CARLIN <br /> FRONT END ENGINEER
             </h1>
             <p>
-              I have 13 years of experience working with design and development
-              teams creating websites and digital experiences.
+              I have 13 years of experience working with cross-functional teams
+              to create websites and digital experiences for local and global
+              brands.
             </p>
             <div className={styles.heroSection__button}>
               <a href="mailto:brentcarlin@me.com">GET IN TOUCH</a>
