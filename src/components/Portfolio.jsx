@@ -11,7 +11,7 @@ import {
 } from "@react-three/drei";
 import { useRef, useMemo } from "react";
 import { Perf } from "r3f-perf";
-import styles from "../sass/home.module.sass";
+import styles from "../sass/home.sass";
 import BasicMaterial from "../objects/materials/basicMaterial";
 import NameAnim from "../objects/geometry/nameAnim";
 import BgAnim from "../objects/geometry/bgAnim";

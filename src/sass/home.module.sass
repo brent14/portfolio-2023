@@ -1,5 +1,29 @@
-@import global.sass
+@import global.module.sass
 
 canvas
-  background: $blue2
-  // background: "#fff"
+  background: $base-color
+
+.loader 
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 300px
+  height: 20px
+  border: 1px solid #ccc
+
+
+.loader-bar 
+  height: 100%
+  background-color: #2196f3
+  transition: width 0.3s
+
+
+.loader-text 
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-size: 14px
+  color: #fff
+
