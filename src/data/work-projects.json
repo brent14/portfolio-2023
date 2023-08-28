@@ -14,7 +14,12 @@
       "animation",
       "parallax"
     ],
-    "video": "/work/covergirl-super-sizer-katy-perry-website.mp4",
+    "videos": [
+      {
+        "url": "/work/covergirl-super-sizer-katy-perry-website.mp4",
+        "size": 600
+      }
+    ],
     "images": [
       {
         "url": "/work/covergirl-super-sizer-katie-perry-website.png",
@@ -29,7 +34,12 @@
     "description": "This website was part of a campaign for the Porsche Cayenne in Latin America to help promote its versatility as not only a luxury car, but a sporty off-roading SUV.  I worked with art directors to help craft animations that showed off the Cayenne’s progress traversing the length of South America and the car features that made it possible.  A major challenge for this website was updating the content of the site in almost real time, as soon as the drivers were able to upload images and videos from remote regions of their journey.",
     "role": "Sole Developer",
     "technologies": ["html", "css", "javascript", "sass", "svg animations"],
-    "video": "/work/porsche-expedition-website.mp4",
+    "videos": [
+      {
+        "url": "/work/porsche-expedition-website.mp4",
+        "size": 600
+      }
+    ],
     "images": [
       {
         "url": "/work/porsche-expedition-website.png",
@@ -51,12 +61,155 @@
       "svg animations",
       "wordpress"
     ],
-    "video": "/work/cfcw-fight-page.mp4",
+    "videos": [
+      {
+        "url": "/work/cfcw-fight-page.mp4",
+        "size": 600
+      }
+    ],
     "images": [
       {
         "url": "/work/cfcw-website-fight-page.png",
         "alt": "Captains for Clean Water - Our Fight - website"
       }
     ]
+  },
+  {
+    "id": 4,
+    "title": "Porsche: LATAM Dealer Landing Pages",
+    "subtitle": "WEBSITE",
+    "description": "We were tasked with creating campaign pages for 16 markets across LATAM. During this process, I worked closely with the Porshe CRM manager to integrate their CRM into the after sales pages for each market. The scale of the project and integration within a rigid website CMS proved to be the two biggest challenges of creating and maintaining these pages. I was able to overcome these challenges by creating a library of version-controlled templates separate from the Porshe CMS.",
+    "role": "Sole Developer",
+    "technologies": [
+      "html",
+      "javascript",
+      "css",
+      "lead collection",
+      "crm integration",
+      "after sales"
+    ],
+    "videos": [],
+    "images": [
+      {
+        "url": "/work/porsche-landing-pages-after-sales.jpg",
+        "alt": "Porsche: LATAM Dealer Landing Pages - After Sales- website"
+      },
+      {
+        "url": "/work/porsche-landing-pages-macan.jpg",
+        "alt": "Porsche: LATAM Dealer Landing Pages - Macan - website"
+      },
+      {
+        "url": "/work/porsche-landing-pages-taycan.jpg",
+        "alt": "Porsche: LATAM Dealer Landing Pages - Taycan - website"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Mercury: Repower",
+    "subtitle": "HTML BANNERS",
+    "description": "These banners were extremely fun to create. I used javascript and gsap to add subtle animations that helped highlight the Mercury Engines. The main challenge of these banners was keeping the same animation timing across all the different sizes. ",
+    "role": "Sole Developer",
+    "technologies": ["html", "javascript", "gsap", "svg animations"],
+    "videos": [
+      {
+        "url": "/work/mercury-fresh-knoxville.mp4",
+        "size": 300
+      },
+      {
+        "url": "/work/mercury-repower.mp4",
+        "size": 300
+      },
+      {
+        "url": "/work/mercury-salt-richmond.mp4",
+        "size": 300
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": 6,
+    "title": "Santa Margherita: Uncork Extraordinary",
+    "subtitle": "HTML BANNERS",
+    "description": "The challenge with these banners was matching up the animation with the main imagery for the campaign. I was able to simulate bubbles that behaved in a realistic manner using a pseudo random number generator in javascript and animations using gsap.",
+    "role": "Sole Developer",
+    "technologies": ["html", "javascript", "gsap"],
+    "videos": [
+      {
+        "url": "/work/santa-margherita-sro.mp4",
+        "size": 300
+      },
+      {
+        "url": "/work/santa-margherita-pro.mp4",
+        "size": 300
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": 7,
+    "title": "University of Miami Graduate Business School",
+    "subtitle": "WEBSITE",
+    "description": "The goal of this project was to capture qualified leads using 14 different landing pages targeting various graduate programs. My role was to develop the backend for the landing pages and the collection of qualified leads in a central database. I also was responsible for creating a data export for the University of Miami Sales team that they could integrate into their CRM platform. ",
+    "role": "Lead Developer",
+    "technologies": [
+      "html",
+      "php",
+      "javascript",
+      "css",
+      "lead collection",
+      "data exports",
+      "crm integration"
+    ],
+    "images": [
+      {
+        "url": "/work/um-graduate-business-school.jpg",
+        "alt": "University of Miami Graduate Business School - website"
+      },
+      {
+        "url": "/work/um-graduate-business-school-dean.jpg",
+        "alt": "University of Miami Graduate Business School DEAN - website"
+      },
+      {
+        "url": "/work/um-graduate-business-school-gemba.jpg",
+        "alt": "University of Miami Graduate Business School GEMBA - website"
+      }
+    ],
+    "videos": []
+  },
+  {
+    "id": 8,
+    "title": "Porsche: Instagram AR Filter",
+    "subtitle": "AR FILTER",
+    "description": "This AR filter was created to get more social engagement for Porsche in the Jamaican market.   I developed it using Meta Spark for deployment on instagram.",
+    "role": "Sole Developer",
+    "technologies": ["meta spark studio", "ar", "filter"],
+    "videos": [
+      {
+        "url": "/work/porsche-ar-filter.mp4",
+        "size": 300
+      }
+    ],
+    "images": []
+  },
+
+  {
+    "id": 9,
+    "title": "Virgin Voyages: Launch Campaign",
+    "subtitle": "HTML BANNERS",
+    "description": "The main focus of these banners was to introduce the Virgin Voyages ship before it launched. This led to a technical challenge of using a flip book effect with the animation, while keeping the size small enough to still be usable on ad networks. ",
+    "role": "Sole Developer",
+    "technologies": ["html", "javascript", "gsap"],
+    "videos": [
+      {
+        "url": "/work/virgin-voyages-kids.mp4",
+        "size": 300
+      },
+      {
+        "url": "/work/virgin-voyages-moet.mp4",
+        "size": 300
+      }
+    ],
+    "images": []
   }
 ]

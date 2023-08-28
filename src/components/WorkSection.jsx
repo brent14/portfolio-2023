@@ -44,7 +44,7 @@ export default function WorkSection(props) {
           description={project.description}
           role={project.role}
           technologies={project.technologies}
-          video={project.video}
+          videos={project.videos}
           images={project.images}
         />
       ))}
