@@ -1,8 +1,8 @@
 import React, { Suspense, useRef, useState } from "react";
 import styles from "../sass/project.module.sass";
-import browserBorder from "/browser-header-triangle.svg";
-import playBtn from "/play-btn.svg";
-import ReactPlayer from "react-player";
+import browserBorderLarge from "/browser-header-triangle.svg";
+import browserBorderSmall from "/browser-header-triangle-300.svg";
+import VideoPlayer from "./VideoPlayer.jsx";
 
 export default function Project({
   title,
@@ -10,56 +10,17 @@ export default function Project({
   description,
   role,
   technologies,
-  video,
+  videos,
   images,
 }) {
-  const videoRef = useRef(null);
-
-  const [isPlaying, setPlaying] = useState(false);
-  const [isError, setError] = useState(false);
-  const [isTouch, setTouch] = useState(false);
-
-  // check if its playing not the error
-
-  // remove error code below
-
-  const handleMouseEnter = () => {
-    setPlaying(true);
-    console.log("mouse enter" + isPlaying);
-  };
-
-  const handleTouch = () => {
-    console.log("touch before " + isPlaying);
-    setPlaying(!isPlaying);
-    setTouch(true);
-    console.log("touch after " + isPlaying);
-  };
-
-  const handleMouseLeave = () => {
-    setPlaying(false);
-    console.log("mouse leave" + isPlaying);
-  };
-
-  const handleOnPause = () => {
-    setPlaying(false);
-    console.log("on pouse " + isPlaying);
-  };
-
-  const handleErrorPlayHover = (e) => {
-    console.log("onError", e);
-    setError(true);
-  };
-
-  // Conditional classes for error and playing state
-  const videoPlayBtnClass = `
-    ${styles.playBtn} 
-    ${isPlaying ? styles.fadeOut : ""} 
-    ${isTouch ? styles.hide : ""}
-    ${!isPlaying ? styles.pause : ""}`;
-
-  const videoPauseFilter = `
-    ${styles.reactPlayer}  
-    ${!isPlaying ? styles.pause : ""} `;
+  const videoStyle300 = `
+    ${styles.website} 
+    ${styles.small}
+  `;
+  const videoStyle600 = `
+    ${styles.website} 
+    ${styles.large}
+  `;
 
   return (
     <div className={styles.project}>
@@ -84,55 +45,27 @@ export default function Project({
         {images.map((image, index) => (
           <div key={index} className={styles.website}>
             <img
-              src={browserBorder}
+              src={browserBorderLarge}
               className={styles.browser}
               alt="browser border"
             />
             <img src={image.url} alt={image.alt} />
           </div>
         ))}
-
-        <div className={styles.website}>
-          <img
-            src={browserBorder}
-            className={styles.browser}
-            alt="browser border"
-          />
+        {videos.map((video, index) => (
           <div
-            className={styles.videoContainer}
-            // onClick={handleTouch}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleTouch}
+            key={index}
+            className={video.size == 300 ? videoStyle300 : videoStyle600}
           >
-            <ReactPlayer
-              width="100%"
-              height="100%"
-              ref={videoRef}
-              playing={isPlaying}
-              loop={true}
-              controls={false}
-              className={styles.reactPlayer}
-              url={video}
-              onPause={handleOnPause}
-              // onPlay={() => console.log("onPlay")}
-              // onReady={() => console.log("onReady")}
-              // onStart={() => console.log("onStart")}
-              onError={handleErrorPlayHover}
-              // onSeek={(e) => console.log("onSeek", e)}
-              // onBuffer={() => console.log("onBuffer")}
-              muted={true}
-              // onMouseEnter={handlePlay}
-              // onMouseLeave={handleMouseLeave}
+            <img
+              src={video.size == 300 ? browserBorderSmall : browserBorderLarge}
+              className={styles.browser}
+              alt="browser border"
             />
 
-            <img
-              src={playBtn}
-              alt="play button"
-              className={videoPlayBtnClass}
-            />
+            <VideoPlayer video={video} />
           </div>
-        </div>
+        ))}
       </div>
       <svg
         className={styles.projectBorder}
