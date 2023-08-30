@@ -62,7 +62,9 @@ export default function Hero(props) {
               brands.
             </p>
             <div className={styles.heroSection__button}>
-              <a href="mailto:brentcarlin@me.com">GET IN TOUCH</a>
+              <a href="mailto:brent@brentcarlin.com?subject=Get%20in%20touch">
+                GET IN TOUCH
+              </a>
             </div>
           </div>
 
